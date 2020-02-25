@@ -1,0 +1,37 @@
+@charset "ISO-8859-1";
+.logo{
+	
+	widht:600px;
+	height:423px;
+	margin-right:110px;
+}
+
+
+.logo2{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	widht:1004px;
+	height:708px;
+	margin-left: 100px; 
+}
+
+.logo3{
+	
+	widht:250px;
+	height:250px;
+	margin: auto; 
+}
+
+.H2Cad{
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+	 
+	
+}
+
+
+
+

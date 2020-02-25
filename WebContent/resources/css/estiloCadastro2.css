@@ -1,0 +1,67 @@
+@charset "ISO-8859-1";
+
+
+  
+  .responstable {
+    margin: 1em 0;
+    width: 100%;
+    overflow: hidden;  
+    background: $background-color;
+    color: $text-color;
+    border-radius: $border-radius;
+    border: $outer-border;
+  
+    tr {
+      border: $cell-border; 
+      &:nth-child(odd) { // highlight the odd rows with a color
+        background-color: $highlight-color;
+      }  
+    }
+  
+    th {
+      display: none; // hide all the table header for mobile
+      border: $header-border;
+      background-color: $header-background-color;
+      color: $header-text-color;
+      padding: 1em;  
+      &:first-child { // show the first table header for mobile
+        display: table-cell;
+        text-align: center;
+      }
+      &:nth-child(2) { // show the second table header but replace the content with the data-th from the markup for mobile
+        display: table-cell;
+        span {display:none;}
+        &:after {content:attr(data-th);}
+      }
+      @media (min-width: $breakpoint) {
+        &:nth-child(2) { // hide the data-th and show the normal header for tablet and desktop
+          span {display: block;}
+          &:after {display: none;}
+        }
+      }
+    }
+  
+    td {
+      display: block; // display the table data as one block for mobile
+      word-wrap: break-word;
+      max-width: 7em;
+      &:first-child { 
+        display: table-cell; // display the first one as a table cell (radio button) for mobile
+        text-align: center;
+        border-right: $cell-border;
+      }
+      @media (min-width: $breakpoint) {
+        border: $cell-border;
+      }
+    }
+  
+    th, td {
+      text-align: left;
+      margin: .5em 1em;  
+      @media (min-width: $breakpoint) {
+        display: table-cell; // show the table as a normal table for tablet and desktop
+        padding: 1em;
+      }
+    }  
+  }    
+}

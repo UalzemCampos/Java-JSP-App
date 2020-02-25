@@ -1,0 +1,24 @@
+@charset "ISO-8859-1";
+
+.search-box{content: "\f002";
+	font-family: 'FontAwesome';
+	position:relative;
+	right: 1px;
+	
+	line-height: 50px;
+	
+	color: #006990;}
+
+.search-box input{
+	padding-right: 50px;
+}
+
+.search-box:before{
+	content: "\f002";
+	font-family: 'FontAwesome';
+	position: absolute;
+	right: 8px;
+	line-height: 50px;
+	padding-left:30px;
+	color: #006990;
+}
